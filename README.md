@@ -164,7 +164,7 @@ also the [Java Cryptography Extension (JCE)](https://en.wikipedia.org/wiki/Java_
 
 *toolkit:*
 * com.onelogin:java-saml-core
-* javax.servlet:servlet-api
+* jakarta.servlet:servlet-api
 
 *maven:*
 * org.apache.maven.plugins:maven-jar-plugin
@@ -207,7 +207,7 @@ In the repo, at *src/main/java* you will find the source; at *src/main/resources
 
 
 #### toolkit (com.onelogin:java-saml) ####
-This folder contains a maven project with the Auth class to handle the low level classes of java-saml-core and the ServletUtils class to handle javax.servlet.http objects, used on the Auth class.
+This folder contains a maven project with the Auth class to handle the low level classes of java-saml-core and the ServletUtils class to handle jakarta.servlet.http objects, used on the Auth class.
 In the repo, at *src/main/java* you will find the source and at *src/test/java* the junit tests for the classes Auth and ServletUtils.
 
 #### samples (com.onelogin:java-saml-tookit-samples) ####
@@ -490,9 +490,9 @@ Auth auth = new Auth(settings, request, response);
 #### The HttpRequest
 java-saml-core uses HttpRequest class, a framework-agnostic representation of an HTTP request.
 
-java-saml depends on javax.servlet:servlet-api, and the classes Auth and ServletUtils use HttpServletRequest and HttpServletResponse objects.
+java-saml depends on jakarta.servlet:servlet-api, and the classes Auth and ServletUtils use HttpServletRequest and HttpServletResponse objects.
 
-If you want to use anything different than javax.servlet.http, you will need to reimplement Auth and ServletUtils based on that new representation of the HTTP request/responses.
+If you want to use anything different than jakarta.servlet.http, you will need to reimplement Auth and ServletUtils based on that new representation of the HTTP request/responses.
 
 #### Initiate SSO
 In order to send an AuthNRequest to the IdP:
